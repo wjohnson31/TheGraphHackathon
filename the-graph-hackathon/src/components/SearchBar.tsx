@@ -11,7 +11,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
 
     const handleSearch = () => {
         console.log('searching');
-        getPunkDetails('2hTKKMwLsdfJm9N7gUeajkgg8sdJwky56Zpkvg8ZcyP8').then(data => console.log(data)).catch(error => console.error(error));
+        getPunkDetails(inputValue).then(data => console.log(data)).catch(error => console.error(error));
          console.log('finished search');
     };
 
