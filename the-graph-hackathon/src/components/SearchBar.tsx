@@ -1,6 +1,6 @@
-// src/components/SearchBar.tsx
-
 import React, { useState } from 'react';
+import { getPunkDetails } from './query';
+
 
 interface SearchBarProps {
     onSearch: (id: string) => void; // Function to handle the search
@@ -10,7 +10,9 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     const [inputValue, setInputValue] = useState('');
 
     const handleSearch = () => {
-        onSearch(inputValue);
+        console.log('searching');
+        getPunkDetails('2hTKKMwLsdfJm9N7gUeajkgg8sdJwky56Zpkvg8ZcyP8').then(data => console.log(data)).catch(error => console.error(error));
+         console.log('finished search');
     };
 
     return (
